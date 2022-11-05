@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -8,13 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductCreateComponent } from './components/product-create/product-create.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { ForDirective } from './directives/for.directive';
+import { RedDirective } from './directives/red.directive';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
-import { RedDirective } from './directives/red.directive';
-import { ForDirective } from './directives/for.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ForDirective } from './directives/for.directive';
     HomeComponent,
     ProductCrudComponent,
     RedDirective,
-    ForDirective
+    ForDirective,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { ForDirective } from './directives/for.directive';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
